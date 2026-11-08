@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>天龙影院-最新电影在线观看_热门电视剧免费追剧_高清影视资源</title>
+  <meta name="description" content="天龙影院提供2026年最新电影、热门电视剧、综艺动漫免费在线观看。高清画质、无广告播放，涵盖动作片、喜剧片、科幻剧、爱情剧等海量影视资源，打造流畅的追剧体验。">
+  <meta name="keywords" content="天龙影院,最新电影在线观看,热门电视剧免费追剧,高清影视资源,在线影院">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231e1b4b'/%3E%3Cpath d='M30 25 L75 50 L30 75 Z' fill='%233b82f6'/%3E%3C/svg%3E">
+  <style>
+    /* 全局变量与重置 */
+    :root {
+      --bg-dark: #0b0c1a;
+      --bg-card: #15172b;
+      --bg-card-hover: #1e2138;
+      --primary: #3b82f6;
+      --primary-glow: #60a5fa;
+      --accent: #f59e0b;
+      --text-main: #f1f5f9;
+      --text-sub: #94a3b8;
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+      --font-stack: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 通用卡片 */
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-glass);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(96, 165, 250, 0.3);
+      background: var(--bg-card-hover);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 28px;
+      background: var(--primary);
+      border-radius: 4px;
+      box-shadow: 0 0 12px var(--primary-glow);
+    }
+
+    /* 顶部导航 */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 12, 26, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(145deg, #3b82f6, #8b5cf6);
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: white;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-sub);
+    }
+
+    .nav-links a {
+      transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      border-bottom-color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-outline {
+      padding: 8px 18px;
+      border-radius: 30px;
+      border: 1px solid var(--border-glass);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-sub);
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: white;
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .btn-primary {
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Banner 区域 */
+    .hero {
+      padding: 50px 0 40px;
+      background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1), transparent 50%);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #fff 30%, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-sub);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* 搜索框 */
+    .search-box {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 60px;
+      border: 1px solid var(--border-glass);
+      padding: 6px;
+      max-width: 560px;
+      margin: 10px auto;
+      backdrop-filter: blur(8px);
+    }
+
+    .search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 12px 20px;
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-box input::placeholder {
+      color: #64748b;
+    }
+
+    .search-box button {
+      background: var(--primary);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 10px 28px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .category-buttons a {
+      padding: 8px 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 30px;
+      border: 1px solid var(--border-glass);
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      transition: all 0.2s;
+    }
+
+    .category-buttons a:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* 热门推荐网格 */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .movie-card {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .movie-poster {
+      height: 160px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-glass);
+    }
+
+    .movie-poster::after {
+      content: '▶';
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.6);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .movie-card:hover .movie-poster::after {
+      opacity: 1;
+    }
+
+    .movie-poster.v1 { background: linear-gradient(145deg, #1e3a8a, #3b82f6); }
+    .movie-poster.v2 { background: linear-gradient(145deg, #7c2d12, #ea580c); }
+    .movie-poster.v3 { background: linear-gradient(145deg, #581c87, #a855f7); }
+    .movie-poster.v4 { background: linear-gradient(145deg, #064e3b, #10b981); }
+    .movie-poster.v5 { background: linear-gradient(145deg, #831843, #ec4899); }
+    .movie-poster.v6 { background: linear-gradient(145deg, #1e293b, #64748b); }
+
+    .movie-tags {
+      display: flex;
+      gap: 8px;
+      font-size: 0.7rem;
+      color: var(--text-sub);
+    }
+
+    .movie-tags span {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+
+    .movie-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .movie-desc {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .movie-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      margin-top: 4px;
+    }
+
+    .movie-meta .hot {
+      color: var(--accent);
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .update-item {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 3px solid var(--primary);
+    }
+
+    .update-item .info h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .update-item .info p {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    .update-item .time {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .category-item {
+      padding: 24px 16px;
+      text-align: center;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-glass);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .category-item .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .category-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .category-item p {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    /* 深度解析 */
+    .deep-analysis {
+      padding: 40px 0;
+    }
+
+    .analysis-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .analysis-text p {
+      margin-bottom: 16px;
+      color: #cbd5e1;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .analysis-text h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 24px 0 12px;
+    }
+
+    .analysis-side {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-glass);
+    }
+
+    .analysis-side h4 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: var(--primary-glow);
+    }
+
+    .analysis-side ul li {
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      display: flex;
+      gap: 8px;
+    }
+
+    .analysis-side ul li::before {
+      content: '▹';
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* FAQ 手风琴 */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-glass);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 18px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--primary);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 24px 20px;
+      max-height: 300px;
+    }
+
+    /* 评论区域 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .comment-item {
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-glass);
+    }
+
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .comment-header .name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .comment-header .date {
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      margin-left: auto;
+    }
+
+    .comment-text {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    /* 资讯卡片 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .news-card {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .news-card h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .news-card .date {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    .news-card p {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 页脚 */
+    .footer {
+      margin-top: 50px;
+      padding: 40px 0 30px;
+      border-top: 1px solid var(--border-glass);
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-brand p {
+      color: var(--text-sub);
+      font-size: 0.9rem;
+      max-width: 300px;
+      margin-top: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 60px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--primary-glow);
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-glass);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(3, 1fr); }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .analysis-content { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .update-list { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .comment-grid { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .footer-inner { flex-direction: column; }
+      .footer-links { flex-wrap: wrap; gap: 30px; }
+    }
+
+    @media (max-width: 480px) {
+      .grid-4 { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+      .search-box { flex-direction: column; background: transparent; border: none; gap: 10px; }
+      .search-box input { background: rgba(255,255,255,0.05); border-radius: 40px; border: 1px solid var(--border-glass); }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="/#hero" class="logo">
+        <span class="logo-icon">天</span>
+        天龙影院
+      </a>
+      <nav class="nav-links">
+        <a href="/#hot">热门推荐</a>
+        <a href="/#update">最新更新</a>
+        <a href="/#category">分类浏览</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">影视资讯</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="/#update" class="btn-outline">今日更新</a>
+        <a href="/#hot" class="btn-primary">开始观看</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 Banner -->
+  <section id="hero" class="hero">
+    <div class="container hero-content">
+      <h1>天龙影院 · 高清影视在线观看</h1>
+      <p>2026年最新电影、热播电视剧、人气综艺动漫，一站式免费追剧。天龙影院聚合全网优质片源，高清流畅无广告，每日更新不断档。</p>
+      <div class="search-box">
+        <input type="text" placeholder="搜索电影、电视剧、综艺或演员...">
+        <button>搜索</button>
+      </div>
+      <div class="category-buttons">
+        <a href="/#category">动作片</a>
+        <a href="/#category">喜剧片</a>
+        <a href="/#category">科幻剧</a>
+        <a href="/#category">爱情剧</a>
+        <a href="/#category">悬疑剧</a>
+        <a href="/#category">综艺</a>
+        <a href="/#category">动漫</a>
+        <a href="/#category">纪录片</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门内容推荐 -->
+  <section id="hot" class="container" style="padding: 40px 0;">
+    <h2 class="section-title">热门推荐 · 大家都在看</h2>
+    <div class="grid-4">
+      <div class="card movie-card">
+        <div class="movie-poster v1"></div>
+        <div class="movie-tags"><span>电影</span><span>动作</span><span>9.2</span></div>
+        <h3 class="movie-title">暗夜追击令</h3>
+        <p class="movie-desc">特工林风为寻失踪搭档，深入跨国黑帮，一场硬核营救就此展开。枪战与爆破场面密集。</p>
+        <div class="movie-meta"><span class="hot">🔥 12.8万热度</span><span>更新至正片</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v2"></div>
+        <div class="movie-tags"><span>电视剧</span><span>悬疑</span><span>8.9</span></div>
+        <h3 class="movie-title">迷雾回声</h3>
+        <p class="movie-desc">小镇接连发生离奇失踪案，女警探抽丝剥茧，真相背后牵扯出二十年前的秘密。</p>
+        <div class="movie-meta"><span class="hot">🔥 9.6万热度</span><span>更新至第12集</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v3"></div>
+        <div class="movie-tags"><span>综艺</span><span>真人秀</span><span>8.5</span></div>
+        <h3 class="movie-title">闪耀的舞台</h3>
+        <p class="movie-desc">全明星竞演真人秀，跨界挑战高难度舞台，每期淘汰制引发全网热议。最新一期迎来淘汰赛。</p>
+        <div class="movie-meta"><span class="hot">🔥 7.2万热度</span><span>每周五更新</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v4"></div>
+        <div class="movie-tags"><span>动漫</span><span>热血</span><span>9.5</span></div>
+        <h3 class="movie-title">剑与苍空</h3>
+        <p class="movie-desc">少年剑士踏上寻找失落圣剑的旅途，与伙伴共同对抗黑暗势力。本季迎来最终决战。</p>
+        <div class="movie-meta"><span class="hot">🔥 15.2万热度</span><span>更新至第24集</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v5"></div>
+        <div class="movie-tags"><span>电影</span><span>爱情</span><span>8.7</span></div>
+        <h3 class="movie-title">夏日来信</h3>
+        <p class="movie-desc">一封迟到十年的情书，让两个曾错过的年轻人再次相遇。治愈系爱情小品，催泪上映。</p>
+        <div class="movie-meta"><span class="hot">🔥 6.9万热度</span><span>已上线</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v6"></div>
+        <div class="movie-tags"><span>纪录片</span><span>自然</span><span>9.0</span></div>
+        <h3 class="movie-title">蓝色星球：深海秘境</h3>
+        <p class="movie-desc">探索深海未知生物，4K镜头记录地球最后的边疆。每一帧都是壁纸级画面。</p>
+        <div class="movie-meta"><span class="hot">🔥 5.4万热度</span><span>全6集已完结</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v1"></div>
+        <div class="movie-tags"><span>电视剧</span><span>古装</span><span>8.8</span></div>
+        <h3 class="movie-title">凤鸣九霄</h3>
+        <p class="movie-desc">将门之女替父从军，在权谋与战火中成长为一代女帅。大女主爽剧，服化道精美。</p>
+        <div class="movie-meta"><span class="hot">🔥 11.3万热度</span><span>更新至第30集</span></div>
+      </div>
+      <div class="card movie-card">
+        <div class="movie-poster v2"></div>
+        <div class="movie-tags"><span>电影</span><span>喜剧</span><span>8.3</span></div>
+        <h3 class="movie-title">疯狂大保镖</h3>
+        <p class="movie-desc">退役特种兵误打误撞成为网红保镖，保护对象竟是个熊孩子。爆笑动作喜剧。</p>
+        <div class="movie-meta"><span class="hot">🔥 8.1万热度</span><span>已上线</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section id="update" class="container" style="padding: 20px 0 40px;">
+    <h2 class="section-title">最新更新 · 今日已上新</h2>
+    <div class="update-list">
+      <div class="card update-item">
+        <div class="info"><h4>迷雾回声</h4><p>第13集已上线，真凶线索浮出水面</p></div>
+        <span class="time">11月7日 10:30</span>
+      </div>
+      <div class="card update-item">
+        <div class="info"><h4>闪耀的舞台</h4><p>第8期淘汰赛上线，谁将止步舞台</p></div>
+        <span class="time">11月7日 09:00</span>
+      </div>
+      <div class="card update-item">
+        <div class="info"><h4>暗夜追击令</h4><p>正片上线，4K HDR版本同步更新</p></div>
+        <span class="time">11月7日 08:15</span>
+      </div>
+      <div class="card update-item">
+        <div class="info"><h4>剑与苍空</h4><p>第25集上线，最终决战开启</p></div>
+        <span class="time">11月7日 00:00</span>
+      </div>
+      <div class="card update-item">
+        <div class="info"><h4>凤鸣九霄</h4><p>第31集更新，女帅出征名场面</p></div>
+        <span class="time">11月6日 20:00</span>
+      </div>
+      <div class="card update-item">
+        <div class="info"><h4>蓝色星球：深海秘境</h4><p>全6集蓝光版上线，支持杜比音效</p></div>
+        <span class="time">11月6日 18:30</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section id="category" class="container" style="padding: 20px 0 40px;">
+    <h2 class="section-title">分类浏览 · 按喜好挑选</h2>
+    <div class="category-grid">
+      <div class="category-item">
+        <div class="icon">🎬</div>
+        <h4>动作片</h4>
+        <p>枪战 · 追车 · 硬汉</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">😂</div>
+        <h4>喜剧片</h4>
+        <p>爆笑 · 解压 · 合家欢</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">🚀</div>
+        <h4>科幻剧</h4>
+        <p>未来 · 太空 · 特效</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">💘</div>
+        <h4>爱情剧</h4>
+        <p>甜宠 · 虐恋 · 治愈</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">🔍</div>
+        <h4>悬疑剧</h4>
+        <p>推理 · 反转 · 烧脑</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">🎤</div>
+        <h4>综艺</h4>
+        <p>真人秀 · 竞技 · 访谈</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">🎌</div>
+        <h4>动漫</h4>
+        <p>热血 · 日常 · 剧场版</p>
+      </div>
+      <div class="category-item">
+        <div class="icon">🌍</div>
+        <h4>纪录片</h4>
+        <p>自然 · 历史 · 人文</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section id="analysis" class="container deep-analysis">
+    <h2 class="section-title">深度解析 · 天龙影院观影指南</h2>
+    <div class="analysis-content">
+      <div class="analysis-text">
+        <p>天龙影院作为一个聚合型在线影视平台，核心价值在于帮助用户快速找到想看的片源，同时提供流畅、高清的播放体验。在内容层面，平台覆盖电影、电视剧、综艺、动漫、纪录片五大板块，每个板块下又细分动作、喜剧、科幻、爱情、悬疑等类型。对于喜欢追新片的用户来说，天龙影院的更新速度紧跟主流平台，热门剧集基本能做到当日同步或次日上线。</p>
+        <p>从用户搜索“天龙影院”这个关键词的行为来看，多数人希望直接进入一个能看片的网站，而不是阅读冗长的介绍。因此页面的首屏搜索框和分类入口被放在最显眼的位置，热门推荐卡片也直接展示正在热播的内容。这种设计逻辑强调“即搜即看”，减少操作路径。</p>
+        <h3>内容吸引力与类型特点</h3>
+        <p>平台上的电影以商业类型片为主，动作、喜剧、科幻占比较高，适合周末放松或碎片时间观看。电视剧方面，悬疑剧和古装剧是流量担当，尤其是强情节、快节奏的剧集更受欢迎。综艺板块以竞演类和真人秀为主，弹幕互动氛围浓厚。动漫则聚集了大量热血番和剧场版，是年轻用户的主要停留区域。</p>
+        <h3>适合人群与浏览建议</h3>
+        <p>如果你习惯在电脑上观看高清影视，天龙影院的网页端布局清晰，分类筛选方便。移动端同样做了适配，卡片式布局在手机上也能流畅滑动。建议新用户先从热门推荐入手，找到感兴趣的类型后再进入分类页深挖。平台的相关推荐算法会根据浏览记录做个性化推送，能有效扩展片单。对于追更用户，最新更新列表会标注集数和时间，方便快速定位。</p>
+        <p>此外，天龙影院在播放体验上注重减少干扰，页面内广告较少，播放器支持倍速和清晰度切换。如果你是资深影迷，深度解析区会不定期更新类型片盘点与观影片单，帮助你在海量内容中建立自己的观影体系。</p>
+      </div>
+      <div class="analysis-side">
+        <h4>快速定位指南</h4>
+        <ul>
+          <li>想找最新大片 → 关注「热门推荐」与「最新更新」</li>
+          <li>按类型筛选 → 使用「分类浏览」进入对应板块</li>
+          <li>追更连载剧集 → 查看「最新更新」中的集数标注</li>
+          <li>了解影视动态 → 浏览「影视资讯」与「深度解析」</li>
+          <li>参考真实口碑 → 阅读「用户评论」区域</li>
+        </ul>
+        <h4 style="margin-top: 24px;">平台特色</h4>
+        <ul>
+          <li>高清片源，部分支持4K HDR</li>
+          <li>每日更新，热门内容同步上线</li>
+          <li>分类细致，快速找到想看的类型</li>
+          <li>移动端适配，随时随地追剧</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 手风琴 -->
+  <section class="container" style="padding: 20px 0 40px;">
+    <h2 class="section-title">常见问题 · 你想知道的</h2>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <div class="faq-question">天龙影院需要注册或登录才能观看吗？</div>
+        <div class="faq-answer">目前天龙影院的大部分内容支持免登录直接观看，无需注册账号。部分高清片源或独家内容可能需要登录后解锁，建议使用邮箱或手机号快速注册，方便同步观看记录和收藏列表。登录后还能获得个性化推荐，提升找片效率。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">平台更新速度怎么样？热门剧集能同步追吗？</div>
+        <div class="faq-answer">天龙影院的更新速度与主流平台基本一致，热门电视剧通常在播出后数小时内上线，部分剧集能做到当日同步。综艺节目和动漫也会在更新后第一时间上架。建议关注「最新更新」板块，那里会标注具体上线时间和集数，方便追更用户第一时间观看。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">观看时画质模糊怎么办？如何切换清晰度？</div>
+        <div class="faq-answer">播放器右下角通常有清晰度切换按钮，默认会根据网络状况自动选择。如果画面模糊，可以手动切换至1080P或4K画质。部分老片源受限于原始素材，最高画质可能有限，但平台会尽量提供修复版本。建议在网络稳定的环境下观看高清内容，以获得最佳体验。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">天龙影院的内容分类有哪些？如何快速找到想看的类型？</div>
+        <div class="faq-answer">平台将内容分为电影、电视剧、综艺、动漫、纪录片五大板块，每个板块下再细分动作、喜剧、科幻、爱情、悬疑、古装等子类型。你可以通过首页的「分类浏览」入口快速进入对应板块，也可以使用搜索框输入片名或演员名字。分类页还支持按年份、地区、评分进行筛选，方便精准定位。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">喜欢的内容可以收藏或追更吗？</div>
+        <div class="faq-answer">登录后可以将影视剧加入收藏夹，系统会在有更新时通过站内信提醒。部分连载剧集支持「追更」功能，开启后新剧集上线会在首页优先展示。即使不登录，也可以通过浏览器的书签功能手动记录喜欢的页面。收藏和追更记录会保存在账号中，换设备登录也能同步。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">天龙影院的内容是免费的吗？有没有广告？</div>
+        <div class="faq-answer">天龙影院的大部分影视内容免费向用户开放，无需付费即可观看。平台通过少量页面广告维持运营，但播放前贴片广告时间较短，部分内容支持跳过。如果追求更纯粹的观看体验，可以关注平台推出的会员服务，享受免广告、更高画质和专属片源等权益。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section id="comments" class="container" style="padding: 20px 0 40px;">
+    <h2 class="section-title">用户评论 · 真实观感</h2>
+    <div class="comment-grid">
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">影</div><span class="name">光影漫游者</span><span class="date">11月6日</span></div>
+        <p class="comment-text">天龙影院的更新速度确实可以，《迷雾回声》我追到第12集了，悬念一直吊着，希望能保持到大结局。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">追</div><span class="name">追剧小能手</span><span class="date">11月5日</span></div>
+        <p class="comment-text">分类做得很细，找科幻片很方便。不过有些老片的画质一般，希望后面能优化一下片源。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">夜</div><span class="name">夜风微凉</span><span class="date">11月4日</span></div>
+        <p class="comment-text">《剑与苍空》最终决战太燃了！打斗作画经费在线，每周就等这一集。天龙影院上的翻译也还不错。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">电</div><span class="name">电影收藏家</span><span class="date">11月3日</span></div>
+        <p class="comment-text">动作片片单挺全的，很多冷门B级片都能找到。就是搜索偶尔不太准，希望搜索算法能优化。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">综</div><span class="name">综艺爱好者</span><span class="date">11月2日</span></div>
+        <p class="comment-text">《闪耀的舞台》淘汰赛太残酷了，我喜欢的选手居然被淘汰了。不过节目剪辑节奏比上一季好多了。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">深</div><span class="name">深海蓝鲸</span><span class="date">11月1日</span></div>
+        <p class="comment-text">纪录片板块是宝藏，《蓝色星球》系列每一帧都能当壁纸。希望多引进一些自然类纪录片。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">路</div><span class="name">路过的猫</span><span class="date">10月30日</span></div>
+        <p class="comment-text">网页端播放挺流畅的，广告也不多，比一些主流平台清爽。移动端体验也可以，躺床上看很舒服。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">古</div><span class="name">古装剧迷</span><span class="date">10月29日</span></div>
+        <p class="comment-text">《凤鸣九霄》服化道很用心，女主从军那段拍得很有气势。就是更新太慢了，等得着急。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">笑</div><span class="name">笑点很低</span><span class="date">10月28日</span></div>
+        <p class="comment-text">《疯狂大保镖》笑死我了，虽然剧情有点套路，但下饭完全够用。希望多上点喜剧片。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">科</div><span class="name">科幻迷航</span><span class="date">10月27日</span></div>
+        <p class="comment-text">科幻剧分类里好片不少，但有些特效比较五毛。整体来说天龙影院的片库量够大，能淘到宝。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">治</div><span class="name">治愈系日常</span><span class="date">10月26日</span></div>
+        <p class="comment-text">《夏日来信》看哭了，纯爱电影后劲太大。天龙影院能上这种小众片挺难得的。</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-header"><div class="avatar">技</div><span class="name">技术宅看片</span><span class="date">10月25日</span></div>
+        <p class="comment-text">建议加一个弹幕开关功能，有时候只想安静看剧。整体播放器功能还算齐全，倍速和清晰度都有。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section id="news" class="container" style="padding: 20px 0 40px;">
+    <h2 class="section-title">影视资讯 · 行业动态</h2>
+    <div class="news-grid">
+      <div class="card news-card">
+        <h4>2026年Q4热门剧集前瞻：悬疑与古装仍是主流</h4>
+        <span class="date">2026年11月7日</span>
+        <p>各大平台陆续公布第四季度片单，悬疑剧占比显著提升，《迷雾回声》第二季已进入制作阶段。</p>
+      </div>
+      <div class="card news-card">
+        <h4>《剑与苍空》最终季口碑爆棚，评分升至9.5</h4>
+        <span class="date">2026年11月6日</span>
+        <p>制作组访谈透露最终决战投入了双倍预算，作画帧数创系列新高，粉丝直呼过瘾。</p>
+      </div>
+      <div class="card news-card">
+        <h4>动作片《暗夜追击令》上线首日播放量破千万</h4>
+        <span class="date">2026年11月5日</span>
+        <p>该片以硬核枪战和实拍爆破场景为卖点，成为近期动作类型片的一匹黑马。</p>
+      </div>
+      <div class="card news-card">
+        <h4>《闪耀的舞台》赛制升级，下期引入观众实时投票</h4>
+        <span class="date">2026年11月4日</span>
+        <p>节目组宣布半决赛将采用全新投票机制，观众可通过线上平台为喜欢的选手助力。</p>
+      </div>
+      <div class="card news-card">
+        <h4>纪录片《蓝色星球》4K修复版上线天龙影院</h4>
+        <span class="date">2026年11月3日</span>
+        <p>经典自然纪录片完成4K HDR重制，支持杜比全景声，带来沉浸式深海体验。</p>
+      </div>
+      <div class="card news-card">
+        <h4>《凤鸣九霄》女主专访：为打戏训练三个月</h4>
+        <span class="date">2026年11月2日</span>
+        <p>主演透露剧中大部分马术和武打镜头亲自上阵，希望呈现真实的女将风采。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div style="font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">天龙影院</div>
+        <p>高清影视在线观看平台，每日更新最新电影、热播剧集、综艺动漫。打造流畅、纯净的追剧体验。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>快速导航</h5>
+          <a href="/#hot">热门推荐</a>
+          <a href="/#update">最新更新</a>
+          <a href="/#category">分类浏览</a>
+          <a href="/#analysis">深度解析</a>
+        </div>
+        <div class="footer-col">
+          <h5>内容板块</h5>
+          <a href="/#category">动作片</a>
+          <a href="/#category">悬疑剧</a>
+          <a href="/#category">综艺</a>
+          <a href="/#category">动漫</a>
+        </div>
+        <div class="footer-col">
+          <h5>友情链接</h5>
+          <a href="#">影视资源站</a>
+          <a href="#">在线影院导航</a>
+          <a href="#">剧集更新日历</a>
+          <a href="#">影评社区</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 天龙影院 · 本站内容均来自互联网公开资源，仅供个人学习交流使用 · 请勿用于商业用途</p>
+    </div>
+  </footer>
+
+  <script>
+    // 简单的 FAQ 手风琴交互
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+    </html>
